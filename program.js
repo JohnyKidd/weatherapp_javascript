@@ -34,7 +34,7 @@ function genHeader(){
 
   searchButton.addEventListener("click",function(e){
 
-    fetch('http://api.openweathermap.org/data/2.5/weather?q='+searchText.value+'&appid=c5e413103e9c0cea0bb5ba4d4701783d', {mode: 'cors'})
+    fetch('https://api.openweathermap.org/data/2.5/weather?q='+searchText.value+'&appid=c5e413103e9c0cea0bb5ba4d4701783d', {mode: 'cors'})
         .then(function(response){
           return response.json();
         })
@@ -70,7 +70,7 @@ function initContent(){
   weatherDiv.className += "weather";
   contentDiv.appendChild(weatherDiv);
 
-  fetch('http://api.openweathermap.org/data/2.5/weather?q=Budapest&appid=c5e413103e9c0cea0bb5ba4d4701783d', {mode: 'cors'})
+  fetch('https://api.openweathermap.org/data/2.5/weather?q=Budapest&appid=c5e413103e9c0cea0bb5ba4d4701783d', {mode: 'cors'})
       .then(function(response){
         return response.json();
       })
